@@ -8,8 +8,8 @@ namespace CodeCoverageDotnetCore.Tests
         [Fact]
         public void GetRandomStringTest()
         {
-            var asd = new Utils();
-
+            var result = new Utils();
+            Assert.NotEmpty(result.GetRandomString());
         }
     }
 }
