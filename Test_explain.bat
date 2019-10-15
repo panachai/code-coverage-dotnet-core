@@ -1,12 +1,17 @@
+REM ลบไฟล์ coverage ตัวเก่า (หากไม่มีไฟล์เก่าจะขึ้น error แต่ไม่มีผลต่อการเทส)
+del coverage /F /Q
+REM ลบไฟล์ coveragereport ตัวเก่า (หากไม่มีไฟล์เก่าจะขึ้น error แต่ไม่มีผลต่อการเทส)
+del coveragereport /F /Q
+
 dotnet test
 REM สั่งให้การเทสครั้งนี้เก็บ Coverage
 /p:CollectCoverage=true
 REM เมื่อมีการ Test หลายๆโปรเจค จะทำการ Merge เพิ่มเข้าไปเรื่อยๆในไฟล์ result ที่เป็นสกุล .XML (ถ้าใช้ท่า output ปกติอย่างเดียว ไฟล์จะทับกัน)
-/p:MergeWith=../coverage/lcov
+/p:MergeWith=../coverage/lcov.json
 REM ตำแหน่งที่วาง result file
 /p:CoverletOutput=../coverage/lcov
 REM format ของการเก็บ coverage ครั้งนี้
-/p:CoverletOutputFormat="opencover"
+/p:CoverletOutputFormat="json%%2copencover"
 REM ไฟล์ solution ของโปรเจค
 CodeCoverageDotnetCore.sln
 
