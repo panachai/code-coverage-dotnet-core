@@ -33,4 +33,4 @@ reportgenerator "-reports:coverage/lcov.opencover.xml" "-targetdir:coveragerepor
 dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.3.0
 ```
 
-- double click Test.bat
+- double click Test.bat or Run Test.ps1 by powershell
