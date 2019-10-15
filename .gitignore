@@ -334,3 +334,7 @@ ASALocalRun/
 # Mac user
 **/.DS_Store
 .DS_Store
+
+# Coverlet
+coverage/
+coveragereport/
