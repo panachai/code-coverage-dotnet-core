@@ -1,8 +1,3 @@
-# ลบไฟล์ coverage ตัวเก่า (หากไม่มีไฟล์เก่าจะขึ้น error แต่ไม่มีผลต่อการเทส)
-Remove-Item -LiteralPath "coverage" -Force -Recurse
-# ลบไฟล์ coveragereport ตัวเก่า (หากไม่มีไฟล์เก่าจะขึ้น error แต่ไม่มีผลต่อการเทส)
-Remove-Item -LiteralPath "coveragereport" -Force -Recurse
-
 dotnet test
 # สั่งให้การเทสครั้งนี้เก็บ Coverage
 /p:CollectCoverage=true

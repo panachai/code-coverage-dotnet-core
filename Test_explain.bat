@@ -1,8 +1,3 @@
-REM ลบไฟล์ coverage ตัวเก่า (หากไม่มีไฟล์เก่าจะขึ้น error แต่ไม่มีผลต่อการเทส)
-del coverage /F /Q
-REM ลบไฟล์ coveragereport ตัวเก่า (หากไม่มีไฟล์เก่าจะขึ้น error แต่ไม่มีผลต่อการเทส)
-del coveragereport /F /Q
-
 dotnet test
 REM สั่งให้การเทสครั้งนี้เก็บ Coverage
 /p:CollectCoverage=true
